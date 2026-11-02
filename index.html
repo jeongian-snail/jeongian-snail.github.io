@@ -67,6 +67,12 @@
     <article class="project" id="yoju" data-category="web">
       <div class="project-meta">
         <p class="eyebrow muted">01 / YOJU</p>
+        <div class="project-gallery">
+          <a class="project-shot" href="assets/yoju-gameplay.jpg" data-image-title="요주 · 실제 플레이 화면" data-image-caption="봇과 대전하며 주사위를 굴리고 점수를 선택하는 화면입니다.">
+            <img src="assets/yoju-gameplay.jpg" width="1520" height="856" alt="요주 게임의 주사위 다섯 개, 아이템과 두 플레이어의 점수표" loading="lazy" decoding="async">
+            <span class="shot-caption">플레이 화면 <span aria-hidden="true">↗</span><span class="sr-only"> 크게 보기</span></span>
+          </a>
+        </div>
         <p class="badge"><span class="status-dot"></span> 웹 서비스 공개</p>
         <h3>요주</h3>
         <p class="project-subtitle">익숙한 야추에<br>새로운 선택을 더하다.</p>
@@ -97,12 +103,23 @@
     <article class="project" id="wordbook" data-category="app">
       <div class="project-meta">
         <p class="eyebrow muted">02 / WORDBOOK</p>
+        <div class="project-gallery app-gallery">
+          <a class="project-shot" href="assets/wordbook-home.webp" data-image-title="암기곡선 단어장 · 홈" data-image-caption="원스토어 상품 페이지에 등록된 앱 화면입니다.">
+            <img src="assets/wordbook-home.webp" width="720" height="1280" alt="오늘 학습과 단어장 목록을 보여 주는 단어장 앱 홈 화면" loading="lazy" decoding="async">
+            <span class="shot-caption">홈 화면 <span aria-hidden="true">↗</span><span class="sr-only"> 크게 보기</span></span>
+          </a>
+          <a class="project-shot" href="assets/wordbook-review.webp" data-image-title="암기곡선 단어장 · 복습" data-image-caption="원스토어 상품 페이지에 등록된 앱 화면입니다.">
+            <img src="assets/wordbook-review.webp" width="720" height="1280" alt="영어 단어를 입력하고 기억 정도에 따라 다음 복습 간격을 선택하는 학습 화면" loading="lazy" decoding="async">
+            <span class="shot-caption">복습 화면 <span aria-hidden="true">↗</span><span class="sr-only"> 크게 보기</span></span>
+          </a>
+        </div>
         <p class="badge"><span class="status-dot"></span> 원스토어 출시</p>
         <h3>암기곡선<br>단어장</h3>
         <p class="project-subtitle">외운 단어를,<br>기억으로 이어가다.</p>
         <p class="period">2026.10 —</p>
         <p class="role">학습 정책·사용 흐름 기획<br>사용 검수·개선 · 스토어 배포 · AI 협업</p>
         <p class="platform-note">Android · 오프라인 학습</p>
+        <a class="text-link store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001011184" target="_blank" rel="noopener noreferrer">원스토어에서 보기 ↗</a>
       </div>
       <div class="project-body">
         <p class="project-lead">단어를 모으는 것에서 한 걸음 더.<br class="desktop-break"> 언제 다시 공부할지까지 관리합니다.</p>
@@ -129,6 +146,12 @@
     <article class="project" id="nyang" data-category="web">
       <div class="project-meta">
         <p class="eyebrow muted">03 / NYANG DROP</p>
+        <div class="project-gallery">
+          <a class="project-shot" href="assets/nyang-gameplay.jpg" data-image-title="냥냥드롭 · 실제 플레이 화면" data-image-caption="고양이를 떨어뜨려 같은 단계끼리 합치는 실제 게임 화면입니다.">
+            <img src="assets/nyang-gameplay.jpg" width="1520" height="685" alt="고양이가 쌓인 냥냥드롭 게임판과 점수, 11단계 고양이 도감" loading="lazy" decoding="async">
+            <span class="shot-caption">플레이 화면 <span aria-hidden="true">↗</span><span class="sr-only"> 크게 보기</span></span>
+          </a>
+        </div>
         <p class="badge"><span class="status-dot"></span> GitHub Pages 배포</p>
         <h3>냥냥드롭</h3>
         <p class="project-subtitle">작은 고양이에서<br>더 큰 고양이로.</p>
@@ -192,6 +215,11 @@
     <details class="credits"><summary>제작 정보·참고</summary><p><a href="https://zune2222.github.io/" target="_blank" rel="noopener noreferrer">박준이 포트폴리오</a>의 여백, 타이포그래피, 프로젝트 정보 구조를 참고했습니다. 이 사이트의 문장·스타일·코드는 정이안의 프로젝트에 맞춰 AI와 함께 새로 작성했습니다.</p></details>
   </div>
 </footer>
+<dialog class="image-viewer" id="image-viewer" aria-labelledby="image-title" aria-describedby="image-caption">
+  <div class="image-viewer-header"><h2 id="image-title"></h2><button class="image-close" type="button" aria-label="확대 화면 닫기" autofocus>닫기 <span aria-hidden="true">×</span></button></div>
+  <img id="image-full" alt="">
+  <p id="image-caption"></p>
+</dialog>
 </body>
 </html>
 

@@ -5,6 +5,37 @@
   const count = document.getElementById('project-count');
   const menu = document.querySelector('.menu-button');
   const navigation = document.getElementById('navigation');
+  const viewer = document.getElementById('image-viewer');
+  const fullImage = document.getElementById('image-full');
+  const imageTitle = document.getElementById('image-title');
+  const imageCaption = document.getElementById('image-caption');
+  let imageTrigger;
+  if (typeof viewer.showModal === 'function') {
+    document.querySelectorAll('.project-shot').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        imageTrigger = link;
+        fullImage.src = link.href;
+        fullImage.alt = link.querySelector('img').alt;
+        imageTitle.textContent = link.dataset.imageTitle;
+        imageCaption.textContent = link.dataset.imageCaption;
+        viewer.showModal();
+        document.body.classList.add('image-open');
+      });
+    });
+    viewer.querySelector('.image-close').addEventListener('click', () => viewer.close());
+    viewer.addEventListener('click', event => {
+      if (event.target !== viewer) return;
+      const bounds = viewer.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) viewer.close();
+    });
+    viewer.addEventListener('close', () => {
+      document.body.classList.remove('image-open');
+      fullImage.removeAttribute('src');
+      imageTrigger?.focus({preventScroll:true});
+    });
+  }
   let currentFilter = 'all';
   function filterProjects(value) {
     currentFilter = value;
